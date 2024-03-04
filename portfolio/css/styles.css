@@ -1,0 +1,321 @@
+/* colors: #00D09C (aqua blue, first gradient color), #15CFFF (light blue, second gradient color), white, #282828 (dark grey, background color)
+fonts: */
+
+/* Simple CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /*font: inherit;*/
+  vertical-align: baseline;
+}
+
+/* Styles for general elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', serif;
+  font-size: 30px;
+}
+
+body {
+  background-color:#202020;
+}
+
+p {
+  font-family:'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #d1d1d1;
+}
+
+a {
+  color: #fff;
+}
+
+#resume-link {
+  background-image: linear-gradient(135deg, #00D09C, #15CFFF), linear-gradient(135deg, #00D09C, #15CFFF);
+  background-size: calc(100% - 10px) 2px, 0 2px; 
+  background-position: 5px 100%, 100% 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: background-position 0.4s ease;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+#resume-link:hover {
+  background-position: 100% 100%, 0 100%;
+  color: #FFFFFF; 
+  font-weight: bolder;
+}
+
+#contact-header {
+  font-size: 75px;
+  text-align: center;
+}
+
+/* Logo Styles */
+#linkedin-logo {
+  margin-right: 75px;
+}
+
+#linkedin-logo, #github-logo {
+  display: block;
+}
+
+#linkedin-logo:hover, #github-logo:hover {
+  padding: 5px;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1;
+}
+
+/* Navbar style rules */
+.navbar {
+  font-family: 'Roboto', serif;
+  font-size: 14px;
+}
+
+.navbar-custom {
+  background-color: #202020 !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 1.3em;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #00D09C !important;
+}
+
+.navbar-nav {
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header {
+  margin-top: 200px;
+  font-size: 100px;
+  color: #fff !important;
+}
+
+.about-header {
+  margin-top: 100px;
+  font-size: 100px;
+  color: #fff !important;
+}
+
+.content-header {
+  margin-top: 200px;
+  font-size: 32px;
+  color: #fff !important;
+}
+
+.projects-header {
+  margin-top: 200px;
+  padding-bottom: 10px; 
+  border-bottom: 2px solid; 
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1; 
+  width: 60%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: #fff;
+  font-weight: 300;
+  border-left: 2px solid;
+}
+
+.rounded-image {
+  border-radius: 50%; 
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.resume-link {
+  font-size: 18px;
+}
+
+.about-link {
+  text-align: center;
+  color: #fff !important;
+}
+
+.about-link a {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: none;
+}
+
+.thin {
+  font-weight: 100;
+  font-style: normal;
+}
+
+.pad {
+  margin-bottom: 200px;
+}
+
+.menu {
+  text-align: center;
+  list-style-type: none;
+  width: 60%;
+  padding-top: 10px;
+}
+
+.menu-link a {
+  font-family: 'Open Sans', sans-serif;
+  color: #d1d1d1;
+  position: relative;
+  transition: color 0.4s ease, font-weight 0.4s ease; 
+}
+
+.menu-link a:hover {
+  font-weight: bold; 
+}
+
+.menu-link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(135deg, #00D09C, #15CFFF), linear-gradient(135deg, #00D09C, #15CFFF);
+  background-size: calc(100% - 10px) 1px, 0 1px;
+  background-position: 5px 100%, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-position 0.4s ease;
+}
+
+.menu li {
+  padding-bottom: 20px;
+}
+
+.main-container {
+  position: relative;
+  padding: 20px;
+  background-color: transparent; 
+  overflow: hidden; 
+}
+
+.menu-container {
+  padding-left: 80px;
+}
+
+/* Border Styles */
+.top-border,
+.bottom-border {
+  position: absolute;
+  background: none; 
+  height: 300px;
+  width: 300px;
+  border-width: 20px; 
+  border-style: solid;
+  border-image-slice: 1; 
+  transition: border-image 2.0s ease; 
+}
+
+.top-border {
+  top: 10px;
+  left: 10px;
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1; 
+  border-left: 10px;
+  border-top: 10px;
+  transform: rotate(180deg);
+}
+
+.bottom-border {
+  bottom: 10px;
+  right: 10px;
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1; 
+  border-left: 10px;
+  border-top: 10px;
+}
+
+.left-border {
+  border-left: 3px solid;
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1;
+}
+
+.left-border p {
+  padding-left: 20px;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px; 
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, #15cfff, #086a9f);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; 
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #086A9F, #00D09C);
+  font-size: 1.1em;
+}
+
+/* Media querys for collapsed nav styling */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    background-color: #000 !important;
+  }
+  .navbar-collapse {
+    background-color: #1e1e1e !important;
+    border-radius: 10px;
+  }
+  .navbar-collapse .nav-link {
+    margin-bottom: 10px;
+  }
+  .navbar-collapse .nav-link {
+    color: #ffffff !important;
+  }
+  .navbar-collapse .nav-link:hover {
+    color: #00D09C !important;
+  }
+  .navbar-collapse .nav-bottom {
+    margin-bottom: 0px !important;
+  }
+}
