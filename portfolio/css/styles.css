@@ -19,6 +19,28 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background-color:#202020;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+footer {
+  text-align: center;
+  display:block;
+  width: 100%;
+  background-color: #151515;
 }
 
 p {
@@ -30,6 +52,97 @@ p {
 
 a {
   color: #fff;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 3em;;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #d1d1d1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px; 
+}
+
+input[type="submit"] {
+  background-color: #086a9f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; 
+  font-weight: bold;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #086A9F, #00D09C);
+}
+
+/* Style rules for fade in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease forwards; 
+}
+
+.fade-in-img {
+  opacity: 0;
+  animation: fadeInAnimation 3s ease forwards;
+}
+
+.slide-in {
+  animation: slideInFromLeft 0.75s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.animated-image:hover {
+  transform: translateX(10px); 
 }
 
 #resume-link {
@@ -50,7 +163,8 @@ a {
 }
 
 #contact-header {
-  font-size: 75px;
+  margin-top: 1em;
+  font-size: 4em;
   text-align: center;
 }
 
@@ -61,12 +175,25 @@ a {
 
 #linkedin-logo, #github-logo {
   display: block;
+  height: 90px;
+  width: 90px;
 }
 
 #linkedin-logo:hover, #github-logo:hover {
   padding: 5px;
   border: 2px solid;
   border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1;
+}
+
+#blog-footer-link {
+  background-image: linear-gradient(135deg, #00D09C, #15CFFF), linear-gradient(135deg, #00D09C, #15CFFF);
+  background-size: calc(100% - 10px) 2px, 0 2px; 
+  background-position: 5px 100%, 100% 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: background-position 0.4s ease;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
 
 /* Navbar style rules */
@@ -94,26 +221,27 @@ a {
   align-items: center;
 }
 
+
 .welcome-header {
-  margin-top: 200px;
-  font-size: 100px;
+  margin-top: 1em;
+  font-size: 5em;
   color: #fff !important;
 }
 
 .about-header {
-  margin-top: 100px;
-  font-size: 100px;
+  margin-top: 0em;
+  font-size: 4em;
   color: #fff !important;
 }
 
 .content-header {
-  margin-top: 200px;
+  margin-top: 125px;
   font-size: 32px;
   color: #fff !important;
 }
 
 .projects-header {
-  margin-top: 200px;
+  margin-top: 3em;;
   padding-bottom: 10px; 
   border-bottom: 2px solid; 
   border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1; 
@@ -132,21 +260,67 @@ a {
   max-width: 100%;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.0);
+  margin-top: 100px;
 }
 
+.linkedin-logo {
+  margin-right: 2em;
+}
+
+.linkedin-logo, .github-logo {
+  text-align: center;
+}
 
 .resume-link {
   font-size: 18px;
 }
 
+.blog-link {
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 1em;
+}
+
+.blog-link:hover {
+  color: #00d09c !important;
+  text-decoration:underline;
+}
+
 .about-link {
   text-align: center;
-  color: #fff !important;
+  padding-top: 2em;
+  background-color: #086a9f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; 
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 .about-link a {
   text-decoration: none;
+}
+
+.about-link:hover {
+  background: linear-gradient(135deg, #086A9F, #00D09C);
+}
+
+.about-button-container {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.about-text {
+  padding-right: 2em;
 }
 
 .underline {
@@ -159,7 +333,8 @@ a {
 }
 
 .pad {
-  margin-bottom: 200px;
+  padding-bottom:4em;
+  padding-top: 1em;
 }
 
 .menu {
@@ -194,19 +369,19 @@ a {
   transition: background-position 0.4s ease;
 }
 
-.menu li {
+.menu-link-1, .menu-link-2 {
   padding-bottom: 20px;
 }
 
 .main-container {
   position: relative;
-  padding: 20px;
+  padding: px;
   background-color: transparent; 
   overflow: hidden; 
 }
 
 .menu-container {
-  padding-left: 80px;
+  padding-left: 6.8em;
 }
 
 /* Border Styles */
@@ -216,7 +391,7 @@ a {
   background: none; 
   height: 300px;
   width: 300px;
-  border-width: 20px; 
+  border-width: 15px; 
   border-style: solid;
   border-image-slice: 1; 
   transition: border-image 2.0s ease; 
@@ -248,47 +423,14 @@ a {
   padding-left: 20px;
 }
 
-/* Form Styles */
-form {
-  max-width: 400px;
-  margin: 0 auto;
+.linkedin-logo:hover, .github-logo:hover {
+  padding: 5px;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-textarea {
-  height: 150px; 
-}
-
-input[type="submit"] {
-  background: linear-gradient(135deg, #15cfff, #086a9f);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto; 
-  font-weight: bold;
-}
-
-input[type="submit"]:hover {
-  background: linear-gradient(135deg, #086A9F, #00D09C);
-  font-size: 1.1em;
+.menu-link-hidden {
+  visibility: hidden;
 }
 
 /* Media querys for collapsed nav styling */
@@ -319,3 +461,110 @@ input[type="submit"]:hover {
     margin-bottom: 0px !important;
   }
 }
+
+/* Index page media querys */
+@media (max-height: 1012px) { /* remove bottom border when screen height is limited */
+  .bottom-border {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects-header {
+    margin-top: 0px;
+  }
+
+  .welcome-header, .content-header, #contact-header {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  footer {
+    position: relative;
+  }
+  
+  .top-border, .bottom-border {
+    display: none;
+  }
+
+  .resume-link {
+    text-align: center;
+  }
+
+  .projects-header {
+    margin-top: 10px; 
+    padding-bottom: 10px; 
+    border-bottom: 2px solid; 
+    border-image: linear-gradient(135deg, #00D09C, #15CFFF) 1; 
+    max-width: 100%; 
+    display: inline-block; 
+    text-align: center; 
+    color: #fff; 
+    font-weight: 300; 
+  }
+
+  .menu-container {
+    padding-left: 0; 
+    text-align: center; 
+  }
+
+  .menu {
+    width: 100%;
+    padding-top: 20px; 
+  }
+
+  .menu-link-1, .menu-link-2 {
+    padding-bottom: 2.5em;
+  }
+
+  .menu-link-bottom {
+    padding-bottom: 5em;
+    padding-top: 2.5em;
+  }
+
+  .menu-link-hidden {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome-header, #contact {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 389px) {
+  #contact-header, .welcome-header, .about-header {
+    font-size: 3em;
+  }
+}
+
+@media (max-height: 1115px) {
+  form {
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 575px) {
+  .rounded-image {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4em;
+  }
+
+  #linkedin-logo, #github-logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  #about-header {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #contact-header {
+    font-size: 3em;
+  }
+}
+
