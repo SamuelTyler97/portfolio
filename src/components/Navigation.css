@@ -1,0 +1,78 @@
+.navbar-nav {
+  margin: auto;
+  font-size: 1.03em;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+  text-align: center;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    background-image: linear-gradient(#00d09c, #15cfff);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: 0s 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:active {
+    color:#00d09c;
+  }
+
+.navbar-custom {
+    padding: 1.0rem;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.99) 0%, rgba(21, 71, 121, 0.99) 50%, rgba(44, 62, 80, 0.99) 100%);
+    font-weight: 500;
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+  }
+  
+  .navbar-toggler {
+    border-color: #fff;
+  
+  }
+  
+  .navbar-toggler-icon {
+    color: #ffffff;
+    border-color: #fff;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1.0);
+  }
+
+  @media (max-width: 767.98px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1.0);
+  }
+
+  @media screen and (max-width: 929px) {
+    .navbar-custom {
+      position: absolute;
+    }
+  }
