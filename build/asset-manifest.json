@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5f2d1f1.css",
+    "main.js": "/static/js/main.612e91c5.js",
+    "static/media/ocean-isle.png": "/static/media/ocean-isle.6a003700111a4496941c.png",
+    "static/media/stock-man-b&w.jpg": "/static/media/stock-man-b&w.7e0db614750556c7a42d.jpg",
+    "static/media/devnow.png": "/static/media/devnow.cc0e53df27824bcfe7e4.png",
+    "static/media/icons8-github.svg": "/static/media/icons8-github.b2294bccaa20da50b7d58419f07c0892.svg",
+    "index.html": "/index.html",
+    "static/media/icons8-linkedin.svg": "/static/media/icons8-linkedin.ada11cda991129bc91b79d2c7cee1066.svg",
+    "main.a5f2d1f1.css.map": "/static/css/main.a5f2d1f1.css.map",
+    "main.612e91c5.js.map": "/static/js/main.612e91c5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5f2d1f1.css",
+    "static/js/main.612e91c5.js"
+  ]
+}
